@@ -1,0 +1,37 @@
+.row{
+    padding: 20px;
+}
+
+div{
+    background-color: #a1b5cb;
+    text-align: justify;
+}
+
+#nombre {
+    font-weight:bold;
+    margin-top:40%;
+    margin-left: 10px;
+}
+
+
+@media (min-width: 576px ) {
+#foto{
+    position:absolute;
+    width:15%;
+    border-radius:100%;
+    box-shadow: 3px 3px 3px grey;
+    left:2%;
+    top: auto;
+}
+}
+
+@media (max-width: 575px ) {
+    #foto{
+        position:absolute;
+        width:15%;
+        border-radius:100%;
+        box-shadow: 3px 3px 3px grey;
+        left:2%;
+        top: auto;
+    }
+    }
