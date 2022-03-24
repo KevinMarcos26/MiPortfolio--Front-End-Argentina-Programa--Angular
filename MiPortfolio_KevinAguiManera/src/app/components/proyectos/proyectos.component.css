@@ -1,0 +1,25 @@
+.row{
+    padding: 5px;
+    background-color: #a1b5cb;
+    height: auto;
+}
+
+.container{
+    width:auto;
+    height:auto;
+    padding: 15px;
+    
+}
+
+.parte1,.parte2{
+    display:inline-block;
+    text-align:justify;
+    padding-top: 15px;
+}
+
+.img-proyectos{
+    box-shadow: 10px 10px 30px #000000;
+    width:auto;
+    height:auto;
+   
+}
