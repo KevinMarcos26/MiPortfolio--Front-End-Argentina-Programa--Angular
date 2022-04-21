@@ -35,3 +35,21 @@ div{
         top: auto;
     }
     }
+
+    .fa fa-trash, .fa fa-edit{
+        color:#2f535e;
+        
+    }
+    
+    #icon1{
+        margin-left: 9rem;
+    
+    }
+    .icon3{
+        float: right;
+        margin-left: 20px;
+        font-size: 1.25rem;
+    }
+    .icon4{
+        float:right;
+    }
