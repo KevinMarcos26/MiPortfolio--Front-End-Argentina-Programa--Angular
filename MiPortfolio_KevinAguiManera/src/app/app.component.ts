@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MiPortfolio_KevinAguiManera';
+  name = 'KEVIN MARCOS AGUI MANERA';
+  position = 'FULL STACK DEVELOPER Jr'
 }
