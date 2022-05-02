@@ -14,8 +14,12 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { HyskComponent } from './components/hysk/hysk.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import {PortfolioService} from './servicios/portfolio.service';
+import { SesionComponent } from './components/sesion/sesion.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { InterceptorService } from './servicios/interceptor.service';
 
 
 
@@ -35,15 +39,22 @@ import {PortfolioService} from './servicios/portfolio.service';
     EducacionComponent,
     HyskComponent,
     ProyectosComponent,
-    FooterComponent
+    FooterComponent,
+    SesionComponent,
+    PortfolioComponent,
+
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgCircleProgressModule.forRoot({}),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+    
   ],
-  providers: [],
+  providers: [PortfolioService,
+  {provide: HTTP_INTERCEPTORS, useClass:InterceptorService, multi:true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

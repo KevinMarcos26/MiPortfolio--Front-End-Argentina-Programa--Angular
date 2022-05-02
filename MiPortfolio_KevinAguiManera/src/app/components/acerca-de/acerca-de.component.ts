@@ -8,19 +8,16 @@ import { PortfolioService } from 'src/app/servicios/portfolio.service';
 })
 export class AcercaDeComponent implements OnInit {
   miPortfolio:any;
-  name!: string;
-  position!: string;
-
   constructor(private datosPortfolio:PortfolioService) { }
 
   ngOnInit(): void {
     this.datosPortfolio.obtenerDatos().subscribe(data => {
-      console.log(data);
-      this.datosPortfolio = data;
+      console.log("Datos personales" + JSON.stringify(data));
+      this.datosPortfolio = data[0];
+    
     });
 
-    this.name = "KEVIN MARCOS AGUI MANERA";
-    this.position = "FULL STACK DEVELOPER Jr";
+    
   }
 
 }
