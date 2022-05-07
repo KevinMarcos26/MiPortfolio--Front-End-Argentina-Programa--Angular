@@ -1,32 +1,38 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, map, Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutenticacionService {
-  url="";
-  currentUserSubject: BehaviorSubject<any>;
+  
+  
+  api = 'https://localhost:3000/api';
+    
+  token:any; 
 
-  constructor(private http: HttpClient) {
-    console.log("El servicio de autenticación está corriendo");
-    this.currentUserSubject = new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}'));
-   }
+  constructor(private http:HttpClient, private router:Router) { }
 
+  login(email: string, password: string) {
+    this.http.post(this.api + '/authenticate', {email: email, password: password})
+    .subscribe((resp: any) => {
+      //redirection
+      this.router.navigate(['profile'])
+      //saving token
+      localStorage.setItem('authToken', resp.token);
+    })
+    }
 
-   IniciarSesion(credenciales:any) : Observable<any>
-   {
-     return this.http.post(this.url,credenciales).pipe(map(data=>{
-       sessionStorage.setItem('currentUser',JSON.stringify(data));
-       this.currentUserSubject.next(data);
-       return data;
-     }))
-   }
+    //close session
+    logOut(){
+      localStorage.removeItem('token');
+    }
 
-
-   get UsuarioAutenticado(){
-     return this.currentUserSubject.value;
-   }
-}
+    //verify session
+    public get logIn(): boolean {
+      return (localStorage.getItem('token') !== null)
+    }
+  }

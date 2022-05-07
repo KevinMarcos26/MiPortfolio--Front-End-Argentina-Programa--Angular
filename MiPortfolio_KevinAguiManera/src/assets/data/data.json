@@ -1,4 +1,145 @@
-{
-   "name" : "KEVIN MARCOS AGUI MANERA",
-   "position": "FULL STACK DEVELOPER Jr"
+{ 
+   "name": "Kevin Marcos Agüi Manera",
+   "title1": "Desarrollador Web Full-Stack Jr",
+   "title2": "Abogado en Derecho Informático",
+   "userimg": "assets/img/foto.jpg",
+   "about": "Hola! Vivo en Rosario, Argentina. Soy Full-Stack Web Developer y Comunicador Social. Me encanta trabajar en equipo, el diseño y seguir aprendiendo a codear.",
+   "experience":[
+       {
+           "experiencename": "Pasantía en el Distrito Sudeoste de la Municipalidad de Rosario.",
+           "description": "Atención al público y gestión de datos personales en la Oficina de Transito.",
+           "other1": "Marzo del 2018 a Marzo del 2019",
+           "other2": "Sebastián Borrelli contacto: 341-6191630",
+           "urlimg": "assets/img/municipalidad.png"
+       },
+       {
+           "experiencename": "Trabajos freelance de diseño gráfico, comunicación y edición.",
+           "description": "Creación de piezas gráficas y logos para marcas. Asesorias en Comunicación. Community Manager.",
+           "other1": "Ediciónes de audio, video e imagén.",
+           "other2": "Desde 2017 a la actualidad. Para referencias ver proyectos.",
+           "urlimg": "assets/img/freelance.jpg"
+       }
+   ],
+   "education":[
+       {
+           "educationname": "Bachiller con Tecnicatura en Agronomía en la Escuela de Educación Agropecuaria Nº1 'Lorenzo Parodi'.",
+           "description": "Conocimientos en gestión de proyectos agropecuarios y gestión en general.",
+           "other1": "Trabajos agroepcuarios en general. Finalizado en el año 2011",
+           "other2": null,
+           "urlimg": "assets/img/eea.jpg"
+       },
+       {
+           "educationname": "Licenciatura en Comunicación Social en la Universidad Nacional de Rosario.",
+           "description": "Diseño, ejecución y evaluación de estrategias de comunicación en medios e instituciones.",
+           "other1": "Diseño y edición de piezas escritas, visuales, sonoras y multimediales.",
+           "other2": "Finalizado en 2022. Título en trámite.",
+           "urlimg": "assets/img/unr.jpg"
+       }
+   ],
+   "skills":[
+       {
+         "skill": "Organización 80%",
+         "progress": "width: 80%"
+       },
+       {
+         "skill": "Creatividad 90%",
+         "progress": "width: 90%"
+       },
+       {
+         "skill": "Trabajo en equipo 90%",
+         "progress": "width: 90%"
+       },
+       {
+           "skill": "Comunicaciones 90%",
+         "progress": "width: 90%"
+       },
+       {
+          "skill": "Diseño Gráfico 90%",
+          "progress": "width: 90%"
+       },
+       {
+          "skill": "Escritura y edición 95%",
+         "progress": "width: 95%"
+       },
+       {
+          "skill": "Programación 70%",
+           "progress": "width: 70%"
+       },
+       {
+         "skill": "Gestión de proyectos 80%",
+         "progress": "width: 80%"
+       }
+   ],
+   "progs": [
+       {
+         "prog": "Photoshop 80%",
+         "progress":"width: 80%"
+       },
+       {
+         "prog": "InDesign 90%",
+          "progress":"width: 90%"
+       },
+       {
+           "prog": "HTML + CSS 90%",
+           "progress":"width: 90%"
+       },
+       {
+           "prog": "Javascript 80%",
+           "progress":"width: 80%"
+       },
+       {
+           "prog": "Bootstrap 90%",
+           "progress":"width: 90%"
+       },
+       {
+           "prog": "Angular 80%",
+           "progress":"width: 80%"
+       },
+       {
+           "prog": "MySQL 80%",
+           "progress":"width: 80%"
+       },
+       {
+           "prog": "Typescript 80%",
+           "progress":"width: 80%"
+       }
+   ],
+   "projects":[
+       {
+           "project": "Spot Audiovisual Institucional para BAR",
+           "description": "Spot realizado en equipo para el Banco de Alimentos de Rosario",
+           "other1": "Planificación integral del proyecto. Coordinación de grupo.",
+           "other2": "Guion y edición.",
+           "date": "Hecho en 2022.",
+           "urlimg": "assets/proyectos/logo-bar.png",
+           "routerlink": "/project1"
+       },
+       {
+           "project": "Edición y diseño Revista Torrente",
+           "description": "Diseño integral de la revista literaria Torrente.",
+           "other1": "Planificación integral del proyecto. Coordinación de grupo. Diseño adecuado al cliente.",
+           "other2": null,
+           "date": "Hecho en 2020.",
+           "urlimg": "assets/proyectos/torrente.png",
+           "routerlink":"/project2" 
+       },
+       {
+           "project": "Diseños de logos y piezas para marcas",
+           "description": "Diseño gráfico freelance.",
+           "other1": "Planificación integral del proyecto. Diseño adecuado al cliente.",
+           "other2": null,
+           "date": "Hechos entre 2017 y 2021.",
+           "urlimg": "assets/proyectos/PG.png",
+           "routerlink": "/project3"
+       }
+   ],
+   "hobbies":[
+       {
+           "hobbie": "Algunas cosas que hago en mi tiempo libre",
+           "other1": "Fotos raras. Tramas. Colores. Alguna animación.",
+           "other2": "Cosas que suelo hacer jugando con programas.",
+           "urlimg": "assets/proyectos/colors.png",
+           "routerlink": "/hobbie1"
+       }
+   ]
 }
