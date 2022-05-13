@@ -1,145 +1,135 @@
 { 
-   "name": "Kevin Marcos Agüi Manera",
-   "title1": "Desarrollador Web Full-Stack Jr",
-   "title2": "Abogado en Derecho Informático",
-   "userimg": "assets/img/foto.jpg",
-   "about": "Hola! Vivo en Rosario, Argentina. Soy Full-Stack Web Developer y Comunicador Social. Me encanta trabajar en equipo, el diseño y seguir aprendiendo a codear.",
+   "name": "KEVIN MARCOS",
+   "lastname": "AGÜI MANERA",
+   "title1": "FULL STACK DEVELOPER JR",
+   "title2": "ABOGADO EN DERECHO INFORMÁTICO",
+   "urlrimg": "assets/fotoportfolio.jpg",
+   "aboutme": "Hola, es un placer presentarme. Me llamo Kevin Marcos Agüi Manera. Tengo 25 años. Soy oriundo de la Ciudad de Córdoba Capital. En Marzo del año 2020, me gradué con honores en la Facultad de Derecho y Ciencias Sociales de la Universidad Católica de Córdoba, con el título de grado de Abogado. En octubre de 2020, recibí el Premio Facultad de Derecho y Ciencias Sociales, por tener el Cuarto Puesto en el Orden de Mérito de la Promoción 2019, con un Promedio General de 9.12. Anteriormente he recibido otras distinciones por mi desempeño académico; en 2008 recibí el Premio Fundación Facultad de Ciencias Médicas de la UNC, al Mejor Promedio de Educación Inicial en Córdoba. En 2014 recibí la distinción del Banco Roela a los Mejores Promedios de la Provincia de Córdoba en Educación Secundaria. Y en 2018 recibí el premio del Banco Santander Río a los mejores Promedios en Educación Universitaria del país. Actualmente resido en Córdoba Capital y poseo manejo de inglés legal escrito. Desde agosto de 2021 inicié mi formación como Full Stack Developer, dentro del programa gubernamental Argetina Programa, y es de mi interés desarrollarme en el mundo profesional IT, sobre todo continuar mi formación en el rubro de los datos y el Gobierno de Datos e Inteligencia Artificial. Con la habilidad de completar tareas de forma precisa,en un entorno rápido y con plazos de entrega conflictivos. Responsable. Puntual. Dedicado. Proactivo. Capaz de trabajar en equipo.",
    "experience":[
        {
-           "experiencename": "Pasantía en el Distrito Sudeoste de la Municipalidad de Rosario.",
-           "description": "Atención al público y gestión de datos personales en la Oficina de Transito.",
-           "other1": "Marzo del 2018 a Marzo del 2019",
-           "other2": "Sebastián Borrelli contacto: 341-6191630",
-           "urlimg": "assets/img/municipalidad.png"
+           "experiencename": "Pasante Estudio Jurídico Particular",
+           "description": "Ayudante en tramitar causas judiciales en Tribunales Provinciales, en juzgados Civiles y Comerciales. Accidentes de Tránsito. Demandas abreviadas. Daños y Perjuicios. Armado de expedientes. Manejo de plataformas como Ciudadano Digital. Anses. Afip. Rentas Córdoba. ",
+           "other1": "(MARZO 2018 HASTA OCTUBRE 2018)",
+           "other2": null
+
+           
+           
        },
        {
-           "experiencename": "Trabajos freelance de diseño gráfico, comunicación y edición.",
-           "description": "Creación de piezas gráficas y logos para marcas. Asesorias en Comunicación. Community Manager.",
-           "other1": "Ediciónes de audio, video e imagén.",
-           "other2": "Desde 2017 a la actualidad. Para referencias ver proyectos.",
-           "urlimg": "assets/img/freelance.jpg"
-       }
+           "experiencename": "Pasante Estudio Jurídico Fidelmino",
+           "description": "Ayudante en tramitar causas judiciales en Tribunales Provinciales, en juzgados Civiles y Comerciales. Divorcios. Declaratoria de Herederos. Sucesiones. Trámites bancarios. Cartas Documento. Contratos. Regulación de Honorarios. Manejo de plataformas como Justicia Córdoba y Extranet.",
+            "other1": "(NOVIEMBRE 2020 HASTA DICIEMBRE 2021)",
+           "other2": "Franco Esteban Fidelmino contacto: 54351-3428324"
+           
+       },
+       {
+        "experiencename": "Investigador Adscrito en Universidad Católica de Córdoba",
+        "description": "*Instituto de Derecho Ambiental de la Universidad Católica de Córdoba. Proyecto de Investigación de Amparo Ambiental en la Provincia de Córdoba. *Proyecto de Investigación de Responsabilidad civil Contractual.",
+        "other1": "(ABRIL 2021 HASTA MARZO 2022)",
+        "other2": " Marta Julia contacto: 54351-5335831"
+        
+    }
    ],
    "education":[
        {
-           "educationname": "Bachiller con Tecnicatura en Agronomía en la Escuela de Educación Agropecuaria Nº1 'Lorenzo Parodi'.",
-           "description": "Conocimientos en gestión de proyectos agropecuarios y gestión en general.",
-           "other1": "Trabajos agroepcuarios en general. Finalizado en el año 2011",
-           "other2": null,
-           "urlimg": "assets/img/eea.jpg"
+           "educationname": "ABOGACÍA- DERECHO",
+           "description": "Graduado con Honores.Promedio 9.12.Integrante del Cuadro de Honor Promoción2019. Cuarto Lugar.",
+           "other1": "(2015-2020)",
+           "other2": "UNIVERSIDAD CATÓLICA DE CÓRDOBA"
+           
        },
        {
-           "educationname": "Licenciatura en Comunicación Social en la Universidad Nacional de Rosario.",
-           "description": "Diseño, ejecución y evaluación de estrategias de comunicación en medios e instituciones.",
-           "other1": "Diseño y edición de piezas escritas, visuales, sonoras y multimediales.",
-           "other2": "Finalizado en 2022. Título en trámite.",
-           "urlimg": "assets/img/unr.jpg"
-       }
+           "educationname": "Diplomatura en Economía Circular y Estrategias de Sustentabilidad. ",
+           "description": "Diplomatura de la Universidad Nacional de Córdoba, en Economía Circular y estrategias de sustentabilidad. Carga horaria de 110 horas. ",
+           "other1": "(OCTUBRE A DICIEMBRE 2021)"
+           
+           
+       },
+       {
+       "educationname": "Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial",
+       "description": "Tecnicatura en Instituto Superior Politécnico de la Provincia de Córdoba. Duración de 2 años y medio. El Técnico Superior en Ciencia de Datos e Inteligencia Artificial estará capacitado para realizar  proyectos de innovación que involucren actividades tanto del campo de la Ciencia de Datos como  de la Inteligencia Artificial. A partir de la consulta y la interpretación de las necesidades del cliente y/u organización, podrá  implementar y modelar la solución, para lo cual realiza las tareas de programación y entrenamiento, pudiendo también realizar acciones de mantenimiento, mejoras y actualizaciones de soluciones",
+       "other1": "(Ingresante en 2022)."
+       
+       
+   }
    ],
-   "skills":[
+   "skills" : [
        {
-         "skill": "Organización 80%",
-         "progress": "width: 80%"
+         "prog": "HTML 100%",
+         "progress":"width: 90%"
        },
        {
-         "skill": "Creatividad 90%",
-         "progress": "width: 90%"
-       },
-       {
-         "skill": "Trabajo en equipo 90%",
-         "progress": "width: 90%"
-       },
-       {
-           "skill": "Comunicaciones 90%",
-         "progress": "width: 90%"
-       },
-       {
-          "skill": "Diseño Gráfico 90%",
-          "progress": "width: 90%"
-       },
-       {
-          "skill": "Escritura y edición 95%",
-         "progress": "width: 95%"
-       },
-       {
-          "skill": "Programación 70%",
-           "progress": "width: 70%"
-       },
-       {
-         "skill": "Gestión de proyectos 80%",
-         "progress": "width: 80%"
-       }
-   ],
-   "progs": [
-       {
-         "prog": "Photoshop 80%",
-         "progress":"width: 80%"
-       },
-       {
-         "prog": "InDesign 90%",
+         "prog": "CSS 100%",
           "progress":"width: 90%"
        },
        {
-           "prog": "HTML + CSS 90%",
-           "progress":"width: 90%"
-       },
-       {
            "prog": "Javascript 80%",
-           "progress":"width: 80%"
-       },
-       {
-           "prog": "Bootstrap 90%",
            "progress":"width: 90%"
        },
        {
-           "prog": "Angular 80%",
-           "progress":"width: 80%"
+           "prog": "Python 90%",
+           "progress":"width: 90%"
        },
        {
-           "prog": "MySQL 80%",
-           "progress":"width: 80%"
+           "prog": "GitHub 90%",
+           "progress":"width: 90%"
        },
        {
-           "prog": "Typescript 80%",
-           "progress":"width: 80%"
-       }
+           "prog": "English 65%",
+           "progress":"width: 100%"
+       },
+       {
+           "prog": "Typescript 60%",
+           "progress":"width: 105%"
+       },
+       {
+        "prog": "Power-Bi 70%",
+        "progress":"width: 110%"
+    },{
+        "prog": "Java 85%",
+        "progress":"width: 110%"
+    },
+    {
+        "prog": "Bootstrap 80%",
+        "progress":"width: 105%"
+    },
+    {
+        "prog": "Angular 75%",
+        "progress":"width: 110%"
+    }
+
+
    ],
-   "projects":[
-       {
-           "project": "Spot Audiovisual Institucional para BAR",
-           "description": "Spot realizado en equipo para el Banco de Alimentos de Rosario",
-           "other1": "Planificación integral del proyecto. Coordinación de grupo.",
-           "other2": "Guion y edición.",
-           "date": "Hecho en 2022.",
-           "urlimg": "assets/proyectos/logo-bar.png",
+
+   "projects":[ {
+           "project": "Base de Datos en MySql",
+           "description":"Base de Datos para un Cine, desarrollada en MySql, para la obtención de Certificación en base de datos SQL en Udemy; con más de 300 líneas de código.",
+           
+           
+           "urlimg": "../../../assets/Capturasql.PNG",
            "routerlink": "/project1"
        },
        {
-           "project": "Edición y diseño Revista Torrente",
-           "description": "Diseño integral de la revista literaria Torrente.",
-           "other1": "Planificación integral del proyecto. Coordinación de grupo. Diseño adecuado al cliente.",
-           "other2": null,
-           "date": "Hecho en 2020.",
-           "urlimg": "assets/proyectos/torrente.png",
+           "project": "Análisis de Ventas de Videojuegos en Power Bi",
+           "description": "Análisis histórico de ventas de videojuegos, realizado con la herramienta Microsoft Power Bi. Proyecto de dashboards e informe sobre ventas globales e histórico de videojuegos, dividido por paises, marcas y años. proyecto para obtener certificación en Udemy, de experto en Power Bi.",
+           
+           "urlimg": "../../../assets/Captura.PNG",
            "routerlink":"/project2" 
        },
        {
-           "project": "Diseños de logos y piezas para marcas",
-           "description": "Diseño gráfico freelance.",
-           "other1": "Planificación integral del proyecto. Diseño adecuado al cliente.",
-           "other2": null,
-           "date": "Hechos entre 2017 y 2021.",
-           "urlimg": "assets/proyectos/PG.png",
+           "project":"Backend Biblioteca de Artistas y Discos en Node.js" ,
+           "description": "Proyecto para obtener certificación en Start Coding, basado en un backend desarrollado en Node js y express como servidor, para desplegar una biblioteca de artistas y sus correspondientes discos.",
+           
+           "urlimg": "../../../assets/Capturanode.PNG",
            "routerlink": "/project3"
-       }
-   ],
-   "hobbies":[
+       },
        {
-           "hobbie": "Algunas cosas que hago en mi tiempo libre",
-           "other1": "Fotos raras. Tramas. Colores. Alguna animación.",
-           "other2": "Cosas que suelo hacer jugando con programas.",
-           "urlimg": "assets/proyectos/colors.png",
-           "routerlink": "/hobbie1"
-       }
+        "project": "Aplicación de Suscripción en React",
+        "description": "Aplicativo realizado en React y Aptugo, que interactúa con una base de datos, con la finalidad de llevar un registro de suscriptores a diferentes servicios profesionales ofrecidos por el titular de la landing page. También se utilizó Redux.",
+        
+        "urlimg": "../../../assets/Capturareact.PNG",
+        "routerlink": "/project4"
+    }
    ]
+   
 }

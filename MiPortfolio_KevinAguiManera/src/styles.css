@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background-color: #000000;
+ }
+
+a {
+    text-decoration: none;
+}
+
+.inputs-edit {
+    caret-color: rgb(165, 18, 50);
+    background-color: rgba(24, 23, 23, 0.438);
+    color: white;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn{
+    color: rgb(165, 18, 50);
+}
+
+.btn:hover {
+    background-color: #eeaec8;
+}
+
+.btn:focus, .btn:active{
+    box-shadow: none;
+}
+
+div.modal-content div.modal-top {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between; 
+    padding-left: 2%; 
+    padding-right: 2%;
+}
+
+@media (max-width: 430px) {
+    .modal{
+        width: 100%;
+    }
+}

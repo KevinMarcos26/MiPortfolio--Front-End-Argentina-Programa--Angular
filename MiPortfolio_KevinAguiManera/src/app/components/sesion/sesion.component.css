@@ -1,0 +1,39 @@
+.container{
+    align-items: center;
+}
+.login{
+    background-color: rgba(241, 205, 220, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    color: rgb(165, 18, 50);
+}
+input{
+    caret-color: rgb(165, 18, 50);
+    background-color: rgba(24, 23, 23, 0.438);
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 1300px) {
+
+    .container{
+        padding-top: 30%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .login{
+        width: 70%;
+    }
+}
+
+@media (max-width: 430px) {
+
+    .login{
+        width: 100%;
+    }
+}

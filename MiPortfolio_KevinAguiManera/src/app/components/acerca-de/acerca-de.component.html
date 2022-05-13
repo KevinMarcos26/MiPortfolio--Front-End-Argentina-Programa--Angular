@@ -1,35 +1,44 @@
-
-
-
-<div class="row">
-
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-<img src="../../../assets/fotoportfolio.PNG" class="img-fluid" id="foto">
-</div>
-
-<div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-    <p>KEVIN MARCOS AGÜI MANERA</p>
-    <P>FULL STACK DEVELOPER JR</P>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-      </svg>
-</div>
-
-<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8"> 
-   <span>
-       <h1>ACERCA DE MI <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-      </svg></h1>
-       <p> Hola, es un placer presentarme. Me llamo Kevin Marcos Agüi Manera. Tengo 25 años. Soy oriundo de la Ciudad de Córdoba Capital. En Marzo del año 2020, me gradué con honores en la Facultad de Derecho y Ciencias Sociales de la Universidad Católica de Córdoba, con el título de grado de Abogado. 
-        En octubre de 2020, recibí el Premio Facultad de Derecho y Ciencias Sociales, por tener el Cuarto Puesto en el Orden de Mérito de la Promoción 2019, con un Promedio General de 9.12. Anteriormente he recibido otras distinciones por mi desempeño académico; en 2008 recibí el Premio Fundación Facultad de Ciencias Médicas de la UNC, al Mejor Promedio de Educación Inicial en Córdoba. En 2014 recibí la distinción del Banco Roela a los Mejores Promedios de la Provincia de Córdoba en Educación Secundaria. Y en 2018 recibí el premio del Banco Santander Río a los mejores Promedios en Educación Universitaria del país.
-        Actualmente resido en Córdoba Capital y poseo manejo de inglés legal escrito. Desde agosto de 2021 inicié mi formación como Full Stack Developer, dentro del programa gubernamental Argetina Programa, y es de mi interés desarrollarme en el mundo profesional IT, sobre todo continuar mi formación en el rubro de los datos y el Gobierno de Datos e Inteligencia Artificial.
-        Con la habilidad de completar tareas de forma precisa,en un entorno rápido y con plazos de entrega conflictivos. Responsable. Puntual. Dedicado. Proactivo. Capaz de trabajar en equipo.
-        </p>
-   </span>
-<div>
+<div class="container"*ngFor="let persona of personas">
+  <p>{{persona?.sobreMi}}</p>
+  <button (click)="setInfo(persona)" *ngIf="isUserLogged" class="btn" data-bs-toggle="modal" data-bs-target="#editmodalSobreMi" title="Editar Descripción">
+      <i class="fa-regular fa-pen-to-square"></i>
+  </button>
 </div>
 
 
+<!-- Modal edit -->
+<div class="modal fade" id="editmodalSobreMi" tabindex="-1" aria-labelledby="editmodalSobreMiLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" >
+      <div class="modal-content">
+          <div class="modal-top">
+              <div>
+                  <h5 class="modal-title" id="editmodalSobreMiLabel" style="font-weight: bold;">Editar datos</h5>
+              </div>
+              <div>
+                  <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                  </svg></button>
+              </div>
+          </div>
+          <div class="modal-body">
+              <form #editFormSobreMi="ngForm">
+                  <div class="form-group">
+                      <label form="sobreMi">Sobre mi: </label>
+                      <textarea type="textarea" maxlength="auto" rows="10" cols="10" ngModel="{{edit?.sobreMi}}" name="sobreMi" class="form-control inputs-edit" id="sobreMi" placeholder="Agrega una descripción sobre ti"></textarea>
+                  </div>
+                  <input type="hidden" ngModel="{{edit?.id}}" name="id" class="form-control" id="id">
+                  <input type="hidden" ngModel="{{edit?.name}}" name="name" class="form-control" id="name">
+                  <input type="hidden" ngModel="{{edit?.imageUrl}}" name="imageUrl" class="form-control" id="imageUrl">
+                  <input type="hidden" ngModel="{{edit?.githubUrl}}" name="githubUrl" class="form-control" id="githubUrl">
+                  <input type="hidden" ngModel="{{edit?.linkedinUrl}}" name="linkedinUrl" class="form-control" id="linkedinUrl">
+                  <input type="hidden" ngModel="{{edit?.jobTitle}}" name="jobTitle" class="form-control" id="jobTitle">
+                  <button (click)="editPersona(editFormSobreMi.value)" class="btn" type="submit" data-bs-dismiss="modal" aria-label="Close">Guardar cambios</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
 
 
 

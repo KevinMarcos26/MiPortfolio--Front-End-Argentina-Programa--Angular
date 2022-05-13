@@ -1,0 +1,39 @@
+.diagrama {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+                        'router router router sidebar'
+                        'router router router sidebar'
+                        'router router router sidebar'
+}
+
+.d-router {
+    grid-area: router;
+    padding: 5%;
+    height: 100vh;
+    background-color:orange;
+}
+
+.d-sidebar {
+    grid-area: sidebar;
+    height: 100vh;
+}
+
+@media (max-width: 1300px) {
+
+    .diagrama {
+    grid-template-areas: 
+                        'sidebar sidebar sidebar sidebar'
+                        'router router router router'
+                        'router router router router'
+    }
+
+    .d-router {
+        height: auto;
+    }
+
+    .d-sidebar {
+        height: auto;
+    }
+    
+}

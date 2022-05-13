@@ -1,0 +1,109 @@
+
+<div class="sidebar" *ngFor="let persona of personas">
+    <div class="sidebar-top">
+       <div>
+           <img src="/assets/APLogo.png" alt="Argentina Programa - icono" id= "ap">
+       </div>
+       <div id="yoProgramo">#YoProgramo</div>
+   </div>
+   <div>
+       <img src={{persona?.imageUrl}} width="60%" height="30%" alt="Ilustracion sobre mi" id="ilustracion">
+       <h2>{{persona?.jobTitle}}</h2>
+       <button (click)="setInfo(persona)" *ngIf="isUserLogged" class="btn" id="btn-editar" data-bs-toggle="modal" data-bs-target="#editmodalPersona" title="Editar perfil">
+           <i class="fa-regular fa-pen-to-square"></i>
+       </button>
+   </div>
+   <div class="navbar-expand-lg sidebar-menu">
+       <button class="btn navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01">
+           <i class="fa-solid fa-angles-down"></i>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+           <div class="menu">
+               <span><a routerLink="/home" class="rosa">Home</a></span>
+               <span><a routerLink="/acerca-de" class="lila">Sobre mí </a></span>
+               <span><a routerLink="/edu-exp" class="celeste">Educación / Experiencia</a></span>
+               <span><a routerLink="/proyectos" class="verde">Proyectos</a></span>
+               <span><a routerLink="/skills" class="amarillo">Skills</a></span>
+           </div>
+       </div>
+   </div>
+   <div class="sidebar-bottom" style="margin-top:10%">
+       <div class="redes">
+           <div style="margin-right: 15%;">
+               <a href="{{persona?.githubUrl}}" style="color: rgb(165, 18, 50);">
+                   <i class="fab fa-github" alt="Github" title="Ir a Github"></i> 
+               </a>
+           </div>
+           <div style="margin-right: 15%;">
+               <a href="{{persona?.linkedinUrl}}" style="color: rgb(165, 18, 50);">
+                   <i class="fab fa-linkedin" alt="Linkedin" title="Ir a Linkedin"></i>
+               </a>
+           </div>
+           <div style="margin-right: 15%;">
+            <a href="{{persona?.facebookUrl}}" style="color: rgb(165, 18, 50);">
+                <i class="fab fa-facebook" alt="Facebook" title="Ir a Facebook"></i>
+            </a></div>
+            <div style="margin-right: 15%;">
+                <a href="{{persona?.instagramUrl}}" style="color: rgb(165, 18, 50);">
+                    <i class="fab fa-instagram" alt="Instagram" title="Ir a Instagram"></i>
+                </a>
+            </div>
+       </div>
+       <button style="margin-left: 35%;" *ngIf="!isUserLogged" class="btn" routerLink="/login" data-bs-toggle="modal" data-bs-target="#modalLogin" title="Inicia sesion para editar" class="btn btn-danger"> Login </button>
+       <button style="margin-left: 35%;" class="btn" *ngIf="isUserLogged" (click)="logOut()" data-bs-toggle="modal" data-bs-target="#modalLogin" title="Cerrar sesion"><i class="btn btn-danger"> Logout</i></button>
+</div>
+
+<!-- Modal edit -->
+<div class="modal fade" id="editmodalPersona" tabindex="-1" aria-labelledby="editmodalPersonaLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered" >
+       <div class="modal-content">
+           <div class="modal-top">
+               <div>
+                   <h5 class="modal-title" id="editmodalPersonaLabel" style="font-weight: bold;">Modificar datos</h5>
+               </div>
+               <div>
+                   <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                    <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                  </svg></button>
+               </div>
+           </div>
+           <div class="modal-body">
+               <form #editFormPersona="ngForm">
+                   <div class="form-group">
+                       <label for="name">Nombre: </label>
+                       <input type="text" ngModel="{{edit?.name}}" name="name" class="form-control inputs-edit" id="name" placeholder="Como es tu nombre?" required>
+                   </div>
+                   <div class="form-group">
+                       <label for="jobTitle">Area de trabajo: </label>
+                       <input type="text" ngModel="{{edit?.jobTitle}}" name="jobTitle" class="form-control inputs-edit" id="jobTitle" placeholder="A que te dedicas?" required>
+                   </div>
+                   <div class="form-group">
+                       <label for="imageUrl">Foto de perfil: </label>
+                       <input type="text" ngModel="{{edit?.imageUrl}}" name="imageUrl" class="form-control inputs-edit" id="imageUrl" placeholder="Copia el link donde tengas tu foto">
+                   </div>
+                   <div class="form-group">
+                       <label for="githubUrl">Link a tu Github: </label>
+                       <input type="text" ngModel="{{edit?.githubUrl}}" name="githubUrl" class="form-control inputs-edit" id="githubUrl" placeholder="Copia el link de tu perfil de Github">
+                   </div>
+                   <div class="form-group">
+                       <label for="linkedinUrl">Link a tu LinkedIn: </label>
+                       <input type="text" ngModel="{{edit?.linkedinUrl}}" name="linkedinUrl" class="form-control inputs-edit" id="linkedinUrl" placeholder="Copia el link de tu perfil de Linkedin">
+                   </div>
+                   <div class="form-group">
+                    <label for="facebookUrl">Link a tu Facebook: </label>
+                    <input type="text" ngModel="{{edit?.facebookUrl}}" name="facebookUrl" class="form-control inputs-edit" id="facebookUrl" placeholder="Copia el link de tu perfil de Facebook">
+                </div>
+                <div class="form-group">
+                    <label for="instagramUrl">Link a tu Instagram: </label>
+                    <input type="text" ngModel="{{edit?.instagramUrl}}" name="instagramUrl" class="form-control inputs-edit" id="instagramUrl" placeholder="Copia el link de tu perfil de Instagram">
+                </div>
+                
+                   <input type="hidden" ngModel="{{edit?.id}}" name="id" class="form-control" id="id">
+                   <input type="hidden" ngModel="{{edit?.sobreMi}}" name="sobreMi" class="form-control" id="sobreMi">
+                   <button [disabled]="editFormPersona.invalid" (click)="editPersona(editFormPersona.value)" class="btn" type="submit" data-bs-dismiss="modal" aria-label="Close">Guardar cambios</button>
+               </form>
+           </div>
+       </div>
+   </div>
+</div>

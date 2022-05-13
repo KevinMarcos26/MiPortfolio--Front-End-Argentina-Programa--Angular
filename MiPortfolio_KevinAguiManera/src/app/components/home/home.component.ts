@@ -1,27 +1,22 @@
 import { HttpErrorResponse } from '@angular/common/http';
-import { Component, Input, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
 import { Persona } from 'src/app/interfaces/ipersona';
 import { TraerInfoService } from 'src/app/servicios/traer-info.service';
-import { SidebarComponent } from '../sidebar/sidebar.component';
 import { LoginService } from 'src/app/servicios/login.service';
 
-
 @Component({
-  selector: 'app-acerca-de',
-  templateUrl: './acerca-de.component.html',
-  styleUrls: ['./acerca-de.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AcercaDeComponent implements OnInit {
-
+export class HomeComponent implements OnInit {
   public personas!: Persona[];
-  public pathPersona : String = "home";
-  public edit!: Persona;
+  public pathPersona: String = "home";
+  public edit! : Persona;
   public isUserLogged: Boolean = false;
 
-
   constructor( private infoService : TraerInfoService,
-    private loginService : LoginService ) { 
+    private loginService : LoginService  ) { 
 
   }
 
@@ -53,8 +48,5 @@ export class AcercaDeComponent implements OnInit {
   public setInfo(info : any): void {
     this.edit = info;
   }
-  
-  
-  
 
 }

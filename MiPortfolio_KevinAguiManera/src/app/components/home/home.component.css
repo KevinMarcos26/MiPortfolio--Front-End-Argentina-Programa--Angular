@@ -1,0 +1,127 @@
+
+
+.modal-content {
+    background-color: orange;
+}
+.modal {
+    color: rgb(165, 18, 50);
+    text-align: center;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 250%;
+    padding-top: 2%;
+}
+
+.hiragana {
+    color: rgb(165, 18, 50);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 600%;
+    margin-bottom: 5%;
+    display: auto;
+}
+
+.animate__animated {
+    animation-duration: 2s;
+    display:auto;
+}
+
+.presentacion {
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-size: 600%;
+    color: #eeaec8;
+}
+
+.img {
+    display: none;
+}
+
+.footer {
+    display: none;
+}
+/* ---------- */
+@media (max-width: 1300px){
+
+    .img {
+        color: rgb(165, 18, 50); 
+        font-weight: bold;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -5%;
+    }
+
+    .hiragana {
+        font-size: 500%;
+    }
+
+    .presentacion {
+        font-size: 500%;
+    }
+    
+    #ilustracion {
+        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    }
+
+}
+
+@media (max-width: 1006px){
+
+    .img {
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    h2 {
+        font-size: 300%;
+    }
+    
+    .hiragana {
+        font-size: 400%;
+    }
+
+    .presentacion {
+        font-size: 400%;
+    }
+}
+
+@media (max-width: 550px) {
+    
+    .footer{
+        display: flex; 
+        align-items: center;
+        padding-right: 3%;
+        margin-left: 0%;
+        margin-right: 0%;
+        height: 5%;
+        background-color:  rgba(0, 0, 0, 0.5);
+        color: rgb(165, 18, 50);
+        margin-top: 10%;
+    }
+
+    #ap {
+        width: 30%;
+    }
+    
+}
+
+@media (max-width: 430px) {
+    
+    .hiragana {
+        font-size: auto;
+    }
+
+    .presentacion {
+        font-size: 300%;
+    }
+
+    .img {
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+}

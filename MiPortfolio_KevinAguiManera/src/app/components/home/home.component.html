@@ -1,0 +1,67 @@
+<div class="container" *ngFor="let persona of personas">
+  <div class="img">
+      <div>
+          <img src={{persona?.imageUrl}} width="30%" alt="Ilustracion sobre mi" id="ilustracion">
+      </div>
+      <div>
+          <h2>{{persona?.jobTitle}}</h2>  
+      </div>
+  </div>
+  <button display="flex" (click)="setInfo(persona)" *ngIf="isUserLogged" class="btn" id="btn-editar" data-bs-toggle="modal" data-bs-target="#editmodalPersonaHome" title="Editar perfil">
+    <i class="fa-regular fa-pen-to-square"></i>
+</button>
+  <div>
+      <p class="hiragana animate__animated animate__fadeInLeftBig"> BIENVENIDOS A MI PORTFOLIO </p>
+      <p class="presentacion animate__animated animate__fadeInRightBig"><img src="/assets/banner.jpg" width="20%" display="auto"></p>
+      <p class="presentacion animate__animated animate__fadeInRightBig">Mi nombre es</p>
+      <p class="presentacion animate__animated animate__fadeInUpBig">{{persona?.name | uppercase }}</p>
+  </div>
+</div>
+<footer class="footer">
+  <div>
+      <img src="/assets/banner.jpg" alt="Argentina Programa - icono" id= "ap">
+  </div>
+  <div id="yoProgramo"></div>
+</footer>
+<!-- Modal edit -->
+<div class="modal fade" id="editmodalPersonaHome" tabindex="-1" aria-labelledby="editmodalPersonaHomeLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" >
+        <div class="modal-content">
+            <div class="modal-top">
+                <div>
+                    <h5 class="modal-title" id="editmodalPersonaHomeLabel" style="font-weight: bold;">Modificar Datos</h5>
+                </div>
+                <div>
+                    <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <form #editFormPersona="ngForm">
+                    <div class="form-group">
+                        <label for="name">Nombre: </label>
+                        <input type="text" ngModel="{{edit?.name}}" name="name" class="form-control inputs-edit" id="name" placeholder="Como es tu nombre?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jobTitle">Area de trabajo: </label>
+                        <input type="text" ngModel="{{edit?.jobTitle}}" name="jobTitle" class="form-control inputs-edit" id="jobTitle" placeholder="A que te dedicas?" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="imageUrl">Foto de perfil: </label>
+                        <input type="text" ngModel="{{edit?.imageUrl}}" name="imageUrl" class="form-control inputs-edit" id="imageUrl" placeholder="Copia el link donde tengas tu foto">
+                    </div>
+                    <div class="form-group">
+                        <label for="githubUrl">Link a tu Github: </label>
+                        <input type="text" ngModel="{{edit?.githubUrl}}" name="githubUrl" class="form-control inputs-edit" id="githubUrl" placeholder="Copia el link de tu perfil de Github">
+                    </div>
+                    <div class="form-group">
+                        <label for="linkedinUrl">Link a tu LinkedIn: </label>
+                        <input type="text" ngModel="{{edit?.linkedinUrl}}" name="linkedinUrl" class="form-control inputs-edit" id="linkedinUrl" placeholder="Copia el link de tu perfil de Github">
+                    </div>
+                    <input type="hidden" ngModel="{{edit?.id}}" name="id" class="form-control" id="id">
+                    <input type="hidden" ngModel="{{edit?.sobreMi}}" name="sobreMi" class="form-control" id="sobreMi">
+                    <button [disabled]="editFormPersona.invalid" (click)="editPersona(editFormPersona.value)" class="btn" type="submit" data-bs-dismiss="modal" aria-label="Close">Guardar cambios</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

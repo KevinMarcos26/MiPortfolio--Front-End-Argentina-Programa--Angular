@@ -1,16 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { HomeComponent } from './components/home/home.component';
 import { SesionComponent } from './components/sesion/sesion.component';
-//import { GuardGuard } from './servicios/guard.guard';
-
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { SkillsComponent } from './components/skills/skills.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 
 const routes: Routes = [
-{path:'portfolio',component:PortfolioComponent}, //, canActivate: [GuardGuard] //*  
-  {path:'sesion', component:SesionComponent},
-  {path:'',redirectTo:'portfolio',pathMatch:'full'}
-  
-  
+  {path: '', component: HomeComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'acerca-de', component: AcercaDeComponent},
+  {path: 'edu-exp', component: EducacionComponent},
+  {path: 'proyectos', component: ProyectosComponent},
+  {path: 'skills', component: SkillsComponent },
+  {path: 'login', component: SesionComponent}
 ];
 
 @NgModule({
@@ -18,3 +22,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+

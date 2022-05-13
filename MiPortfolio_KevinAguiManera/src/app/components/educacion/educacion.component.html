@@ -1,49 +1,236 @@
-<div class="row">
+<div class="container">
+  <div class="row">
+      <div class="col-6 text-end left">
+          <h3 style="margin-bottom: 10%;">
+              <button class="btn left" *ngIf="isUserLogged"  data-bs-toggle="modal" data-bs-target="#addmodalEducacion" title="Agregar Educacion"><i class="fa-regular fa-pen-to-square"></i></button>
+              Educación</h3>
+          <div id="info-container" *ngFor="let edu of edus">
+              <h5>{{edu?.especialidad}}</h5>
+              <h6 class="lugar">{{edu?.institucion}}</h6> 
+              <h6>{{edu?.fechainicio}} - {{edu?.fechafin}}</h6>
+              <button (click)="setInfo(edu)" *ngIf="isUserLogged"  class="btn left" data-bs-toggle="modal" data-bs-target="#deletemodalEducacion" title="Eliminar Educacion"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button (click)="setInfo(edu)" *ngIf="isUserLogged"  class="btn left" data-bs-toggle="modal" data-bs-target="#editmodalEducacion" title="Editar Educacion"><i class="fa-regular fa-pen-to-square"></i></button>
+          </div>
+      </div>
+      <div class="col-6 text-start right">
+      <h3 style="margin-bottom: 5%;">
+        Experiencia 
+        <button *ngIf="isUserLogged" class="btn right" data-bs-toggle="modal" data-bs-target="#addmodalExpLab" title="Agregar Experiencia"><i class="fa-regular fa-pen-to-square"></i></button></h3>
+          <div *ngFor="let explab of explaborales">
+              <h5>{{explab?.posicion}}</h5>
+              <h6 class="lugar">{{explab?.empresa}}</h6>
+              <h6>{{explab?.fechainicio}} - {{explab?.fechafin}}</h6>
+              <p>{{explab?.jobDescription}}</p>
+              <button (click)="setInfo(explab)" *ngIf="isUserLogged" class="btn right" data-bs-toggle="modal" data-bs-target="#deletemodalExpLab" title="Eliminar Experiencia"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button (click)="setInfo(explab)" *ngIf="isUserLogged" class="btn right" data-bs-toggle="modal" data-bs-target="#editmodalExpLab" title="Editar Experiencia"><i class="fa-regular fa-pen-to-square"></i></button>
+          </div>
+      </div>
+  </div>
 
-    <h1>FORMACIÓN ACADÉMICA <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-      </svg>
-
-    </h1>
- 
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
-        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/>
-      </svg>
-        <ul>
-            <li>
-                <h2> ABOGACÍA- DERECHO</h2> - <H3>(2015-2020)</H3>
-                <p>
-                    UNIVERSIDAD CATÓLICA DE CÓRDOBA
-                     
-Graduado con Honores.
-Promedio 9.12.
-Integrante del Cuadro de Honor Promoción
-2019. Cuarto Lugar.
-                </p>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h2>Diplomatura en Economía Circular y Estrategias de Sustentabilidad</h2> - <H3>(OCTUBRE A DICIEMBRE 2021)</H3>
-                <p>
-                   Diplomatura de la Universidad Nacional de Córdoba, en Economía Circular y estrategias de sustentabilidad. Carga horaria de 110 horas.
-                </p>
-            </li>
-        </ul>
-        <ul>
-            <li>
-                <h2>Tecnicatura Superior en Ciencia de Datos e Inteligencia Artificial</h2> - <H3>(Ingresante en 2022)</H3>
-                <p>
-                Tecnicatura en Instituto Superior Politécnico de la Provincia de Córdoba. Duración de 2 años y medio. El Técnico Superior en Ciencia de Datos e Inteligencia Artificial estará capacitado para realizar  proyectos de innovación que involucren actividades tanto del campo de la Ciencia de Datos como  de la Inteligencia Artificial. A partir de la consulta y la interpretación de las necesidades del cliente y/u organización, podrá  implementar y modelar la solución, para lo cual realiza las tareas de programación y entrenamiento, pudiendo también realizar acciones de mantenimiento, mejoras y actualizaciones de soluciones
-                </p>
-            </li>
-        </ul>
-       
-     
-    </div>
-
-
-
-
+  <!-- Modal add educacion -->
+  <div class="modal fade" id="addmodalEducacion" tabindex="-1" aria-labelledby="addmodalEducacionLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+              <div class="modal-top">
+                  <div>
+                      <h5 class="modal-title" id="addmodalEducacionLabel" style="font-weight: bold;">Agregar Datos</h5>
+                  </div>
+                  <div>
+                      <button type="button" class="btn left" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                  </button></div>
+              </div>
+              <div class="modal-body">
+                  <form #addFormEdu="ngForm" (ngSubmit)="addEducacion(addFormEdu)">
+                      <div class="form-group">
+                          <label for="especialidad">Título: </label>
+                          <input type="text" ngModel name="especialidad" class="form-control inputs-edit" id="especialidad" placeholder="Qué estudiaste?" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="institucion">Institucion: </label>
+                          <input type="text" ngModel name="institucion" class="form-control inputs-edit" id="institucion" placeholder="Donde estudiaste?" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="fechainicio">Fecha de inicio: </label>
+                          <input type="text" ngModel name="fechainicio" class="form-control inputs-edit" id="fechainicio" placeholder="Cuando empezaste?" required>
+                      </div>
+                      <div>
+                          <label for="fechafin">Fecha de fin: </label>
+                          <input type="text" ngModel name="fechafin" class="form-control inputs-edit" id="fechafin" placeholder="Cuando finalizaste?" required>
+                      </div>
+                      <button class="btn left" [disabled]="addFormEdu.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-check"></i></button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Modal edit educacion -->
+  <div class="modal fade" id="editmodalEducacion" tabindex="-1" aria-labelledby="editmodalEducacionLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+              <div class="modal-top">
+                  <div>
+                      <h5 class="modal-title" id="editmodalEducacionLabel" style="font-weight: bold;">Agregar Datos</h5>
+                   </div>
+                  <div>
+                      <button type="button" class="btn left" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <form #editFormEdu="ngForm">
+                      <div class="form-group">
+                          <label for="especialidad">Título: </label>
+                          <input type="text" ngModel="{{edit?.especialidad}}" name="especialidad" class="form-control inputs-edit" id="especialidad" placeholder="Qué estudiaste?">
+                      </div>
+                      <input type="hidden" ngModel="{{edit?.id}}" name="id" class="form-control" id="id">
+                      <div class="form-group">
+                          <label for="institucion">Institucion: </label>
+                          <input type="text" ngModel="{{edit?.institucion}}" name="institucion" class="form-control inputs-edit" id="institucion" placeholder="Donde estudiaste?">
+                      </div>
+                      <div class="form-group">
+                          <label for="fechainicio">Fecha de inicio: </label>
+                          <input type="text" ngModel="{{edit?.fechainicio}}" name="fechainicio" class="form-control inputs-edit" id="fechainicio" placeholder="Cuando empezaste?">
+                      </div>
+                      <div>
+                          <label for="fechafin">Fecha de fin: </label>
+                          <input type="text" ngModel="{{edit?.fechafin}}" name="fechafin" class="form-control inputs-edit" id="fechafin" placeholder="Cuando finalizaste?">
+                      </div>
+                      <button (click)="editEducacion(editFormEdu.value)" class="btn left" type="submit" data-bs-dismiss="modal" aria-label="Close">Guardar cambios</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Modal delete educacion -->
+  <div class="modal fade" id="deletemodalEducacion" tabindex="-1" aria-labelledby="deletemodalEducacionLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+              <div class="modal-top">
+                  <div>
+                      <h5 class="modal-title" id="deletemodalEducacionLabel" style="font-weight: bold;">Eliminar Datos</h5>
+                  </div>
+                  <div>
+                      <button type="button" class="btn left" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                  </button>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <h1>ADVERTENCIA</h1>
+                  <h4>Estas seguro que deseas eliminar {{edit?.especialidad}}?</h4>
+                  <button (click)="deleteEducacion(edit?.id)" class="btn left" type="submit" data-bs-dismiss="modal" aria-label="Close">
+                      <i class="fa-solid fa-heart-crack"></i> SI, ELIMINAR <i class="fa-solid fa-heart-crack"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Modal add experiencia -->
+  <div class="modal fade" id="addmodalExpLab" tabindex="-1" aria-labelledby="addmodalExpLabLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+              <div class="modal-top">
+                  <div>
+                      <h5 class="modal-title" id="addmodalExpLabLabel" style="font-weight: bold;">Agregar Datos</h5>
+                  </div>
+                  <div>
+                      <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                      </svg></button>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <form #addFormExp="ngForm" (ngSubmit)="addExpLab(addFormExp)">
+                      <div class="form-group">
+                          <label for="posicion">Posición: </label>
+                          <input type="text" ngModel name="posicion" class="form-control inputs-edit" id="posicion" placeholder="Cuál era tu puesto?" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="empresa">Empresa: </label>
+                          <input type="text" ngModel name="empresa" class="form-control inputs-edit" id="empresa" placeholder="Donde trabajabas?" required>
+                      </div>
+                      <div class="form-group">
+                          <label for="fechaInicio">Fecha de inicio: </label>
+                          <input type="text" ngModel name="fechaInicio" class="form-control inputs-edit" id="fechaInicio" placeholder="Cuando empezaste?" required>
+                      </div>
+                      <div>
+                          <label for="fechaFin">Fecha de fin: </label>
+                          <input type="text" ngModel name="fechaFin" class="form-control inputs-edit" id="fechaFin" placeholder="Cuando finalizaste?" required>
+                      </div>
+                      <div>
+                          <label for="jobDescription">Descripción: </label>
+                          <input type="text" ngModel name="jobDescription" class="form-control inputs-edit" id="jobDescription" placeholder="Describi tus tareas en este puesto" required>
+                      </div>
+                      <button class="btn right" [disabled]="addFormExp.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-check"></i></button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Modal edit experiencia -->
+  <div class="modal fade" id="editmodalExpLab" tabindex="-1" aria-labelledby="editmodalExpLabLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+              <div class="modal-top">
+                  <div>
+                      <h5 class="modal-title" id="editmodalExpLabLabel" style="font-weight: bold;">Agregar Datos</h5>
+                   </div>
+                  <div>
+                      <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <form #editFormExpLab="ngForm">
+                      <div class="form-group">
+                          <label for="posicion">Posición: </label>
+                          <input type="text" ngModel="{{edit?.posicion}}" name="posicion" class="form-control inputs-edit" id="posicion" placeholder="Cuál era tu puesto?">
+                      </div>
+                      <input type="hidden" ngModel="{{edit?.id}}" name="id" class="form-control" id="id">
+                      <div class="form-group">
+                          <label for="empresa">Empresa: </label>
+                          <input type="text" ngModel="{{edit?.empresa}}" name="empresa" class="form-control inputs-edit" id="empresa" placeholder="Donde trabajabas?">
+                      </div>
+                      <div class="form-group">
+                          <label for="fechaInicio">Fecha de inicio: </label>
+                          <input type="text" ngModel="{{edit?.fechaInicio}}" name="fechaInicio" class="form-control inputs-edit" id="fechaInicio" placeholder="Cuando empezaste?">
+                      </div>
+                      <div>
+                          <label for="fechaFin">Fecha de fin: </label>
+                          <input type="text" ngModel="{{edit?.fechaFin}}" name="fechaFin" class="form-control inputs-edit" id="fechaFin" placeholder="Cuando finalizaste?">
+                      </div>
+                      <div>
+                          <label for="jobDescription">Descripción: </label>
+                          <input type="text" ngModel="{{edit?.jobDescription}}" name="jobDescription" class="form-control inputs-edit" id="jobDescription" placeholder="Describi tus tareas en este puesto">
+                      </div>
+                      <button (click)="editExpLab(editFormExpLab.value)" class="btn right" type="submit" data-bs-dismiss="modal" aria-label="Close">Guardar cambios</button>
+                  </form>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- Modal delete experiencia -->
+  <div class="modal fade" id="deletemodalExpLab" tabindex="-1" aria-labelledby="deletemodalExpLabLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" >
+          <div class="modal-content">
+              <div class="modal-top">
+                  <div>
+                      <h5 class="modal-title" id="deletemodalExpLabLabel" style="font-weight: bold;">Agregar Datos</h5>
+                  </div>
+                  <div>
+                      <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                  </div>
+              </div>
+              <div class="modal-body">
+                  <h1>(X.X)</h1>
+                  <h4>Estas seguro que deseas eliminar {{edit?.empresa}}?</h4>
+                  <button (click)="deleteExpLab(edit?.id)" class="btn right" type="submit" data-bs-dismiss="modal" aria-label="Close">
+                      <i class="fa-solid fa-heart-crack"></i> SI, ELIMINAR <i class="fa-solid fa-heart-crack"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
