@@ -4,7 +4,7 @@
     background-color: orange;
 }
 .modal {
-    color: rgb(165, 18, 50);
+    color: lime;
     text-align: center;
 }
 
@@ -30,7 +30,7 @@ h2 {
 .presentacion {
     font-family: 'Baloo Bhaijaan 2', cursive;
     font-size: 600%;
-    color: #eeaec8;
+    color: blue;
 }
 
 .img {
@@ -41,10 +41,10 @@ h2 {
     display: none;
 }
 /* ---------- */
-@media (max-width: 1300px){
+@media (max-width: 1800px){
 
     .img {
-        color: rgb(165, 18, 50); 
+        color: lime; 
         font-weight: bold;
         align-items: center;
         display: flex;
@@ -62,8 +62,7 @@ h2 {
     }
     
     #ilustracion {
-        clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
-    }
+        border-radius: 190px }
 
 }
 
@@ -76,6 +75,10 @@ h2 {
 }
 
 @media (max-width: 800px) {
+
+    container {
+        margin-top: 30%;
+    }
 
     h2 {
         font-size: 300%;

@@ -2,11 +2,11 @@
 <div class="container" >
     <div class="proyecto" *ngFor="let proyecto of proyectos">
         <div class="imagen">
-            <a href={{proyecto.pUrl}} title="ver en Github"><img src={{proyecto.pImage}} alt="imagen del proyecto"></a>
+            <a href={{proyecto.pUrl}} title="ver enlace"><img src={{proyecto.pImage}} alt="imagen del proyecto"></a>
         </div>
         <div class="contenido">
             <p class="tecnologias">{{proyecto.tecnologias}}</p>
-            <a href={{proyecto.pUrl}} title="ver en Github"><h4>{{proyecto.pName}}</h4></a>
+            <a href={{proyecto.pUrl}} title="ver enlace"><h4>{{proyecto.pName}}</h4></a>
             <p>Objetivo: {{proyecto.descripcion}}</p> 
             <button (click)="setInfo(proyecto)" *ngIf="isUserLogged" class="btn" data-bs-toggle="modal" data-bs-target="#deletemodalProyecto" title="Eliminar Proyecto"><i class="fa-regular fa-circle-xmark"></i></button>
             <button (click)="setInfo(proyecto)" *ngIf="isUserLogged" class="btn" data-bs-toggle="modal" data-bs-target="#editmodalProyecto" title="Editar Proyecto"><i class="fa-regular fa-pen-to-square"></i></button>
@@ -51,10 +51,7 @@
                         <label for="pImage">Imagen: </label>
                         <input type="text" ngModel name="pImage" class="form-control inputs-edit" id="pImage" placeholder="Deja una imagen representativa" required>
                     </div>
-                    <button class="btn" [disabled]="addFormProyecto.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
-                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
-                      </svg></button>
+                    <button class="btn" [disabled]="addFormProyecto.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close">Guardar cambios</button>
                 </form>
             </div>
         </div>
@@ -66,10 +63,13 @@
         <div class="modal-content">
             <div class="modal-top">
                 <div>
-                    <h5 class="modal-title" id="editmodalProyectoLabel" style="font-weight: bold;">(O_O)</h5>
+                    <h5 class="modal-title" id="editmodalProyectoLabel" style="font-weight: bold;">Editar Datos</h5>
                     </div>
                 <div>
-                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                      </svg></button>
                 </div>
             </div>
             <div class="modal-body">
@@ -95,7 +95,7 @@
                         <label for="pImage">Imagen: </label>
                         <input type="text" ngModel="{{edit?.pImage}}" name="pImage" class="form-control inputs-edit" id="pImage" placeholder="Deja una imagen representativa" required>
                     </div>
-                    <button class="btn" (click)="editProyecto(editFormProyecto.value)" type="submit" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-check"></i></button>
+                    <button class="btn" (click)="editProyecto(editFormProyecto.value)" type="submit" data-bs-dismiss="modal" aria-label="Close"> Guardar Cambios</button>
                 </form>
             </div>
         </div>
@@ -107,17 +107,20 @@
         <div class="modal-content">
             <div class="modal-top">
                 <div>
-                    <h5 class="modal-title" id="deletemodalProyectoLabel" style="font-weight: bold;">(O_O)</h5>
+                    <h5 class="modal-title" id="deletemodalProyectoLabel" style="font-weight: bold;">Eliminar datos</h5>
                 </div>
                 <div>
-                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                    <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                      </svg></button>
                 </div>
             </div>
             <div class="modal-body">
-                <h1>(X.X)</h1>
+                <h1>ADVERTENCIA</h1>
                 <h4>Estas seguro que deseas eliminar {{edit?.pName}}?</h4>
                 <button (click)="deleteProyecto(edit.id)" class="btn" type="submit" data-bs-dismiss="modal" aria-label="Close">
-                    <i class="fa-solid fa-heart-crack"></i> SI, ELIMINAR <i class="fa-solid fa-heart-crack"></i>
+                     SI, ELIMINAR 
                 </button>
             </div>
         </div>

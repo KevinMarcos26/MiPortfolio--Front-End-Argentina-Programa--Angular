@@ -1,7 +1,7 @@
 
 
 .modal {
-    color: rgb(165, 18, 50);
+    color: lime;
 }
 
 .sidebar-top div{
@@ -17,9 +17,9 @@ h2 {
 
 .sidebar {
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: slateblue;
     height: 100%;
-    color: rgb(165, 18, 50);
+    color: lime;
 }
 
 .sidebar-top {
@@ -31,11 +31,19 @@ h2 {
 }
 
 #ap {
-    width: 40%;
+    margin-left: 10px;
+    width: 50%;
+}
+
+#Inti {
+      width:100%;
+      display: auto;
+      margin-left: 10px;
 }
 
 #btn-editar {
     display: none;
+    width: 50%;
 }
 
 .sidebar-bottom {
@@ -44,10 +52,13 @@ h2 {
     align-items: center;
     padding-left: 18%;
     padding-right: 18%;
+    
+    
 }
 
 .redes {
     display: flex;
+    
 }
 
 .sidebar-menu {
@@ -106,7 +117,7 @@ h2 {
 }
 
 #ilustracion {
-    clip-path: polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%);
+    border-radius: 190px;
     margin-left: 5%;
 }
 
@@ -115,10 +126,10 @@ h2 {
 }
 
 .modal-content {
-    background-color: rgba(241, 205, 220, 0.7);
+    background-color: blue;
 }
 
-@media (max-width: 1300px){
+@media (max-width: 1600px){
 
     .sidebar {
         display: flex;
@@ -152,6 +163,7 @@ h2 {
         padding-right: 2%;
         padding-left: 2%;
         width: 20%;
+       
     }
 
     .sidebar-top {
@@ -169,6 +181,9 @@ h2 {
 
     .sidebar-bottom {
         width: 40%;
+        margin-right: 25px;
+        margin-bottom: 40px;
+        
     }
 
     .sidebar-menu {
@@ -195,13 +210,20 @@ h2 {
         justify-content: flex-start;
     }
 
+    .sidebar-bottom{
+        margin-bottom: 110px;
+        width:50%;
+    }
+
+
+
     .sidebar-top {
-        width: 30%;
-        margin-right: 0%;
+        width: 20%;
+        margin-right: 15%;
     }
 
     .sidebar-menu {
-        width: 25%;
+        width: 20%;
     }
 
     .menu {

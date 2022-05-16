@@ -4,11 +4,11 @@
        <div>
            <img src="/assets/APLogo.png" alt="Argentina Programa - icono" id= "ap">
        </div>
-       <div id="yoProgramo">#YoProgramo</div>
+       <div><img src="/assets/logointi.png" alt="Inti - icono" id="Inti"></div>
    </div>
    <div>
        <img src={{persona?.imageUrl}} width="60%" height="30%" alt="Ilustracion sobre mi" id="ilustracion">
-       <h2>{{persona?.jobTitle}}</h2>
+       <h2 color="lime">{{persona?.jobTitle}}</h2>
        <button (click)="setInfo(persona)" *ngIf="isUserLogged" class="btn" id="btn-editar" data-bs-toggle="modal" data-bs-target="#editmodalPersona" title="Editar perfil">
            <i class="fa-regular fa-pen-to-square"></i>
        </button>
@@ -18,7 +18,7 @@
            <i class="fa-solid fa-angles-down"></i>
        </button>
        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-           <div class="menu">
+           <div class="menu" margin-top="15px" margin-left="10px">
                <span><a routerLink="/home" class="rosa">Home</a></span>
                <span><a routerLink="/acerca-de" class="lila">Sobre mí </a></span>
                <span><a routerLink="/edu-exp" class="celeste">Educación / Experiencia</a></span>
@@ -27,31 +27,34 @@
            </div>
        </div>
    </div>
-   <div class="sidebar-bottom" style="margin-top:10%">
+   <div class="sidebar-bottom" style="margin-top:25%">
        <div class="redes">
            <div style="margin-right: 15%;">
-               <a href="{{persona?.githubUrl}}" style="color: rgb(165, 18, 50);">
+               <a href="{{persona?.githubUrl}}" width="28%" display="flex" style="color: gold ;">
                    <i class="fab fa-github" alt="Github" title="Ir a Github"></i> 
                </a>
            </div>
            <div style="margin-right: 15%;">
-               <a href="{{persona?.linkedinUrl}}" style="color: rgb(165, 18, 50);">
+               <a href="{{persona?.linkedinUrl}}" width="28%" display="flex" style="color: gold;">
                    <i class="fab fa-linkedin" alt="Linkedin" title="Ir a Linkedin"></i>
                </a>
            </div>
            <div style="margin-right: 15%;">
-            <a href="{{persona?.facebookUrl}}" style="color: rgb(165, 18, 50);">
+            <a href="{{persona?.facebookUrl}}" width="28%" display="flex"  style="color: gold;">
                 <i class="fab fa-facebook" alt="Facebook" title="Ir a Facebook"></i>
             </a></div>
             <div style="margin-right: 15%;">
-                <a href="{{persona?.instagramUrl}}" style="color: rgb(165, 18, 50);">
+                <a href="{{persona?.instagramUrl}}" width="28%" display="flex" style="color: gold ;">
                     <i class="fab fa-instagram" alt="Instagram" title="Ir a Instagram"></i>
                 </a>
             </div>
        </div>
        <button style="margin-left: 35%;" *ngIf="!isUserLogged" class="btn" routerLink="/login" data-bs-toggle="modal" data-bs-target="#modalLogin" title="Inicia sesion para editar" class="btn btn-danger"> Login </button>
        <button style="margin-left: 35%;" class="btn" *ngIf="isUserLogged" (click)="logOut()" data-bs-toggle="modal" data-bs-target="#modalLogin" title="Cerrar sesion"><i class="btn btn-danger"> Logout</i></button>
-</div>
+       
+       
+       
+    </div>
 
 <!-- Modal edit -->
 <div class="modal fade" id="editmodalPersona" tabindex="-1" aria-labelledby="editmodalPersonaLabel" aria-hidden="true">

@@ -1,4 +1,10 @@
+.html{
+    color: orange;
+}
+
+
 .diagrama {
+    background-color:orange;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas: 
@@ -8,18 +14,23 @@
 }
 
 .d-router {
+    display:auto;
+    width: auto;
     grid-area: router;
     padding: 5%;
-    height: 100vh;
+    height: auto;
     background-color:orange;
 }
 
 .d-sidebar {
+    background-color:slateblue;
     grid-area: sidebar;
-    height: 100vh;
+    height: auto;
+    display:auto;
+    width: auto;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1500px) {
 
     .diagrama {
     grid-template-areas: 
@@ -29,11 +40,15 @@
     }
 
     .d-router {
-        height: auto;
+        height: flex;
+        width: auto;
+        display:auto;
     }
 
     .d-sidebar {
         height: auto;
+        width: auto;
+        display:auto;
     }
     
 }

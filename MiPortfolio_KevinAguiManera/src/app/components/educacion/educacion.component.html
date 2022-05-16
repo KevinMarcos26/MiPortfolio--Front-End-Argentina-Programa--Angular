@@ -8,7 +8,7 @@
               <h5>{{edu?.especialidad}}</h5>
               <h6 class="lugar">{{edu?.institucion}}</h6> 
               <h6>{{edu?.fechainicio}} - {{edu?.fechafin}}</h6>
-              <button (click)="setInfo(edu)" *ngIf="isUserLogged"  class="btn left" data-bs-toggle="modal" data-bs-target="#deletemodalEducacion" title="Eliminar Educacion"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button (click)="setInfo(edu)" *ngIf="isUserLogged"  class="btn left" data-bs-toggle="modal" data-bs-target="#deletemodalEducacion" title="Eliminar Educacion"><i class="fa-regular fa-circle-xmark"></i></button>
               <button (click)="setInfo(edu)" *ngIf="isUserLogged"  class="btn left" data-bs-toggle="modal" data-bs-target="#editmodalEducacion" title="Editar Educacion"><i class="fa-regular fa-pen-to-square"></i></button>
           </div>
       </div>
@@ -16,12 +16,12 @@
       <h3 style="margin-bottom: 5%;">
         Experiencia 
         <button *ngIf="isUserLogged" class="btn right" data-bs-toggle="modal" data-bs-target="#addmodalExpLab" title="Agregar Experiencia"><i class="fa-regular fa-pen-to-square"></i></button></h3>
-          <div *ngFor="let explab of explaborales">
+          <div id="info-container" *ngFor="let explab of explaborales">
               <h5>{{explab?.posicion}}</h5>
               <h6 class="lugar">{{explab?.empresa}}</h6>
-              <h6>{{explab?.fechainicio}} - {{explab?.fechafin}}</h6>
+              <h6> {{explab?.fechainicio}} -- {{explab?.fechafin}} </h6>
               <p>{{explab?.jobDescription}}</p>
-              <button (click)="setInfo(explab)" *ngIf="isUserLogged" class="btn right" data-bs-toggle="modal" data-bs-target="#deletemodalExpLab" title="Eliminar Experiencia"><i class="fa-regular fa-pen-to-square"></i></button>
+              <button (click)="setInfo(explab)" *ngIf="isUserLogged" class="btn right" data-bs-toggle="modal" data-bs-target="#deletemodalExpLab" title="Eliminar Experiencia"><i class="fa-regular fa-circle-xmark"></i></button>
               <button (click)="setInfo(explab)" *ngIf="isUserLogged" class="btn right" data-bs-toggle="modal" data-bs-target="#editmodalExpLab" title="Editar Experiencia"><i class="fa-regular fa-pen-to-square"></i></button>
           </div>
       </div>
@@ -59,7 +59,7 @@
                           <label for="fechafin">Fecha de fin: </label>
                           <input type="text" ngModel name="fechafin" class="form-control inputs-edit" id="fechafin" placeholder="Cuando finalizaste?" required>
                       </div>
-                      <button class="btn left" [disabled]="addFormEdu.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-check"></i></button>
+                      <button class="btn left" [disabled]="addFormEdu.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close"> Guardar cambios</button>
                   </form>
               </div>
           </div>
@@ -71,10 +71,13 @@
           <div class="modal-content">
               <div class="modal-top">
                   <div>
-                      <h5 class="modal-title" id="editmodalEducacionLabel" style="font-weight: bold;">Agregar Datos</h5>
+                      <h5 class="modal-title" id="editmodalEducacionLabel" style="font-weight: bold;">Editar Datos</h5>
                    </div>
                   <div>
-                      <button type="button" class="btn left" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                      <button type="button" class="btn left" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/>
+                      </svg></button>
                   </div>
               </div>
               <div class="modal-body">
@@ -121,7 +124,7 @@
                   <h1>ADVERTENCIA</h1>
                   <h4>Estas seguro que deseas eliminar {{edit?.especialidad}}?</h4>
                   <button (click)="deleteEducacion(edit?.id)" class="btn left" type="submit" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="fa-solid fa-heart-crack"></i> SI, ELIMINAR <i class="fa-solid fa-heart-crack"></i>
+                       SI, ELIMINAR 
                   </button>
               </div>
           </div>
@@ -153,18 +156,19 @@
                           <input type="text" ngModel name="empresa" class="form-control inputs-edit" id="empresa" placeholder="Donde trabajabas?" required>
                       </div>
                       <div class="form-group">
-                          <label for="fechaInicio">Fecha de inicio: </label>
-                          <input type="text" ngModel name="fechaInicio" class="form-control inputs-edit" id="fechaInicio" placeholder="Cuando empezaste?" required>
+                          <label for="fechainicio">Fecha de inicio: </label>
+                          <input type="text" ngModel name="fechainicio" class="form-control inputs-edit" id="fechainicio" placeholder="Cuando empezaste?" required>
                       </div>
                       <div>
-                          <label for="fechaFin">Fecha de fin: </label>
-                          <input type="text" ngModel name="fechaFin" class="form-control inputs-edit" id="fechaFin" placeholder="Cuando finalizaste?" required>
+                          <label for="fechafin">Fecha de fin: </label>
+                          <input type="text" ngModel name="fechafin" class="form-control inputs-edit" id="fechafin" placeholder="Cuando finalizaste?" required>
                       </div>
                       <div>
                           <label for="jobDescription">Descripción: </label>
                           <input type="text" ngModel name="jobDescription" class="form-control inputs-edit" id="jobDescription" placeholder="Describi tus tareas en este puesto" required>
                       </div>
-                      <button class="btn right" [disabled]="addFormExp.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-check"></i></button>
+                      <button class="btn right" [disabled]="addFormExp.invalid" type="submit" data-bs-dismiss="modal" aria-label="Close">Guardar Cambios
+                  </button>
                   </form>
               </div>
           </div>
@@ -176,10 +180,13 @@
           <div class="modal-content">
               <div class="modal-top">
                   <div>
-                      <h5 class="modal-title" id="editmodalExpLabLabel" style="font-weight: bold;">Agregar Datos</h5>
+                      <h5 class="modal-title" id="editmodalExpLabLabel" style="font-weight: bold;">Editar Datos</h5>
                    </div>
                   <div>
-                      <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                      <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                  </button>
                   </div>
               </div>
               <div class="modal-body">
@@ -194,12 +201,12 @@
                           <input type="text" ngModel="{{edit?.empresa}}" name="empresa" class="form-control inputs-edit" id="empresa" placeholder="Donde trabajabas?">
                       </div>
                       <div class="form-group">
-                          <label for="fechaInicio">Fecha de inicio: </label>
-                          <input type="text" ngModel="{{edit?.fechaInicio}}" name="fechaInicio" class="form-control inputs-edit" id="fechaInicio" placeholder="Cuando empezaste?">
+                          <label for="fechainicio">Fecha de inicio: </label>
+                          <input type="text" ngModel="{{edit?.fechainicio}}" name="fechainicio" class="form-control inputs-edit" id="fechainicio" placeholder="Cuando empezaste?">
                       </div>
                       <div>
-                          <label for="fechaFin">Fecha de fin: </label>
-                          <input type="text" ngModel="{{edit?.fechaFin}}" name="fechaFin" class="form-control inputs-edit" id="fechaFin" placeholder="Cuando finalizaste?">
+                          <label for="fechafin">Fecha de fin: </label>
+                          <input type="text" ngModel="{{edit?.fechafin}}" name="fechafin" class="form-control inputs-edit" id="fechafin" placeholder="Cuando finalizaste?">
                       </div>
                       <div>
                           <label for="jobDescription">Descripción: </label>
@@ -217,17 +224,20 @@
           <div class="modal-content">
               <div class="modal-top">
                   <div>
-                      <h5 class="modal-title" id="deletemodalExpLabLabel" style="font-weight: bold;">Agregar Datos</h5>
+                      <h5 class="modal-title" id="deletemodalExpLabLabel" style="font-weight: bold;">Eliminar  Datos</h5>
                   </div>
                   <div>
-                      <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-heart-circle-xmark"></i></button>
+                      <button type="button" class="btn right" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bookmark-x" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M6.146 5.146a.5.5 0 0 1 .708 0L8 6.293l1.146-1.147a.5.5 0 1 1 .708.708L8.707 7l1.147 1.146a.5.5 0 0 1-.708.708L8 7.707 6.854 8.854a.5.5 0 1 1-.708-.708L7.293 7 6.146 5.854a.5.5 0 0 1 0-.708z"/>
+                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5V2zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1H4z"/></svg>
+                  </button>
                   </div>
               </div>
               <div class="modal-body">
-                  <h1>(X.X)</h1>
+                  <h1>ADVERTENCIA</h1>
                   <h4>Estas seguro que deseas eliminar {{edit?.empresa}}?</h4>
                   <button (click)="deleteExpLab(edit?.id)" class="btn right" type="submit" data-bs-dismiss="modal" aria-label="Close">
-                      <i class="fa-solid fa-heart-crack"></i> SI, ELIMINAR <i class="fa-solid fa-heart-crack"></i>
+                  SI, ELIMINAR 
                   </button>
               </div>
           </div>
