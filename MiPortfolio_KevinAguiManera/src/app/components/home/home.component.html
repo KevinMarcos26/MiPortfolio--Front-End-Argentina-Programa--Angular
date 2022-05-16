@@ -1,12 +1,13 @@
 <div class="container" *ngFor="let persona of personas">
-  <div class="img">
-      <div>
-          <img src={{persona?.imageUrl}} width="30%" alt="Ilustracion sobre mi" id="ilustracion">
-      </div>
-      <div>
-          <h2>{{persona?.jobTitle}}</h2>  
-      </div>
-  </div>
+    <div class="container" *ngFor="let persona of personas">
+        <div class="img">
+            <div>
+                <img src={{persona?.imageUrl}} width="30%" alt="Ilustracion sobre mi" id="ilustracion">
+            </div>
+            <div>
+                <h2>{{persona?.jobTitle}}</h2>  
+            </div>
+        </div>
   <button display="flex" (click)="setInfo(persona)" *ngIf="isUserLogged" class="btn" id="btn-editar" data-bs-toggle="modal" data-bs-target="#editmodalPersonaHome" title="Editar perfil">
     <i class="fa-regular fa-pen-to-square"></i>
 </button>

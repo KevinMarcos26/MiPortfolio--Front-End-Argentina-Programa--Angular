@@ -17,7 +17,7 @@ h2 {
 
 .sidebar {
     text-align: center;
-    background-color: slateblue;
+    background-color: darkslateblue;
     height: 100%;
     color: lime;
 }
@@ -75,23 +75,23 @@ h2 {
 }
 
 .rosa {
-    color: #eeaec8;
+    color: magenta;
 }
 
 .lila {
-    color: #c1b3d6;
+    color: magenta;
 }
 
 .celeste {
-    color: #97cfd5;
+    color: magenta;
 }
 
 .verde {
-    color: #b6d3be;
+    color: magenta;
 }
 
 .amarillo {
-    color: #dbd6a1;
+    color: magenta;
 }
 
 .rosa:hover {
@@ -100,19 +100,19 @@ h2 {
 }
 
 .lila:hover {
-    color: #a57ce7;
+    color: red;
     font-size: 110%;
 }
 .celeste:hover {
-    color: #509ba3;
+    color: red;
     font-size: 110%;
 }
 .verde:hover {
-    color: #70b684;
+    color: red;
     font-size: 110%;
 }
 .amarillo:hover {
-    color: #d3cc6d;
+    color: red;
     font-size: 110%;
 }
 
@@ -129,7 +129,7 @@ h2 {
     background-color: blue;
 }
 
-@media (max-width: 1600px){
+@media (max-width: 1200px){
 
     .sidebar {
         display: flex;

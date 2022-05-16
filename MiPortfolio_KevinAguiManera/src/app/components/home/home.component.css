@@ -1,5 +1,4 @@
 
-
 .modal-content {
     background-color: orange;
 }
@@ -40,8 +39,8 @@ h2 {
 .footer {
     display: none;
 }
-/* ---------- */
-@media (max-width: 1800px){
+
+@media (max-width: 1200px){
 
     .img {
         color: lime; 

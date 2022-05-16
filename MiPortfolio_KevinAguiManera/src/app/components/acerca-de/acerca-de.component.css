@@ -6,13 +6,13 @@
 
 p {
     font-size: 200%;
-    color: #c1b3d6;
+    color: darkmagenta;
     font-weight: bold;
 }
 
 .modal-content {
     background-color: rgba(193, 179, 214, 0.5);
-    color: #c1b3d6;
+    color: darkmagenta;
     text-align: center;
 }
 
