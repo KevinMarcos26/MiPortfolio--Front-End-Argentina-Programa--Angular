@@ -3,7 +3,7 @@
     background-color: orange;
 }
 .modal {
-    color: lime;
+    color: blue;
     text-align: center;
 }
 
@@ -43,7 +43,7 @@ h2 {
 @media (max-width: 1400px){
 
     .img {
-        color: lime; 
+        color: blue; 
         font-weight: bold;
         align-items: center;
         display: flex;
@@ -67,7 +67,7 @@ h2 {
 
 }
 
-@media (max-width: 1100px){
+@media (max-width: 1250px){
 
     .img {
         margin-top: 5%;
