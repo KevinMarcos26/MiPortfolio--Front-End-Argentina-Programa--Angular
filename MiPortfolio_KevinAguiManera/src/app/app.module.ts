@@ -15,6 +15,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { SesionComponent } from './components/sesion/sesion.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { TraerInfoService } from './servicios/traer-info.service';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -28,6 +29,7 @@ import { TraerInfoService } from './servicios/traer-info.service';
     SkillsComponent,
     SidebarComponent,
     SesionComponent,
+    FooterComponent,
     
   ],
   imports: [
