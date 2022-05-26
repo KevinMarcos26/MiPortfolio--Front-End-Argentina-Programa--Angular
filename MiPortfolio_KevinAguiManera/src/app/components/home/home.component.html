@@ -1,3 +1,5 @@
+<app-spinner></app-spinner>
+
 <div class="container" *ngFor="let persona of personas">
     <div class="container" *ngFor="let persona of personas">
         <div class="img">
@@ -14,8 +16,8 @@
   <div>
       <p class="hiragana animate__animated animate__fadeInLeftBig"> ¡BIENVENIDOS! ESTE ES MI PORTFOLIO </p>
       <p class="presentacion animate__animated animate__fadeInRightBig"><img src="/assets/banner.jpg" width="18%" display="auto"></p>
-      <p class="presentacion animate__animated animate__fadeInRightBig">SOY</p>
-      <p class="presentacion animate__animated animate__fadeInUpBig">{{persona?.name | uppercase }}</p>
+      <p class="presentacion animate__animated animate__fadeInRightBig"><i>"La verdad solo se puede encontrar en un lugar: el código".</i> Robert C. Martin</p>
+      <p class="presentacion animate__animated animate__fadeInUpBig"> SOY {{persona?.name | uppercase }}</p>
   </div>
 </div>
 <footer class="footer">

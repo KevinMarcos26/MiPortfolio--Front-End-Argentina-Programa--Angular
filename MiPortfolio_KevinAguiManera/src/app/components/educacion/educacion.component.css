@@ -85,7 +85,7 @@ h5, h3 {
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 430px) {
     h5 {
         font-size: 14px;
     }

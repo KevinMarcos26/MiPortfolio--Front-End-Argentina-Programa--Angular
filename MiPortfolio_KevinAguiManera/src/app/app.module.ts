@@ -16,6 +16,7 @@ import { SesionComponent } from './components/sesion/sesion.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { TraerInfoService } from './servicios/traer-info.service';
 import { FooterComponent } from './components/footer/footer.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 
 
@@ -30,6 +31,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SidebarComponent,
     SesionComponent,
     FooterComponent,
+    SpinnerComponent,
     
   ],
   imports: [

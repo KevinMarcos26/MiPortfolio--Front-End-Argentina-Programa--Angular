@@ -240,7 +240,7 @@ h2 {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 350px) {
 
     .sidebar {
         justify-content: space-between;
@@ -266,7 +266,7 @@ h2 {
     
 }
 
-@media (max-width: 530px) {
+@media (max-width: 430px) {
 
     .menu {
         font-size: 95%;

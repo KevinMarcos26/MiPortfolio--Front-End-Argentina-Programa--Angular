@@ -42,7 +42,7 @@ p {
     }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 430px) {
 
     p {
         font-size: 100%;

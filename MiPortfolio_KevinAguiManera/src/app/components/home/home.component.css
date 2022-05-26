@@ -32,6 +32,10 @@ h2 {
     color: blue;
 }
 
+.animate__fadeInUpBig{
+color: purple;
+}
+
 .img {
     display: none;
 }
@@ -94,7 +98,7 @@ h2 {
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 550px) {
     
     .footer{
         display: flex; 
@@ -114,7 +118,7 @@ h2 {
     
 }
 
-@media (max-width: 530px) {
+@media (max-width: 430px) {
     
     .hiragana {
         font-size: auto;
