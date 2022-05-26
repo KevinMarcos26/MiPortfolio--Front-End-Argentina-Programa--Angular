@@ -13,15 +13,15 @@
 .lds-hourglass {
     display: inline-block;
     position: relative;
-    width: 80px;
-    height: 80px;
+    width: auto;
+    height: 100%;
   }
   .lds-hourglass:after {
     content: " ";
-    display: block;
+    display: flex;
     border-radius: 50%;
-    width: 0;
-    height: 0;
+    width: auto;
+    height: auto;
     margin: 8px;
     box-sizing: border-box;
     border: 32px solid #fff;
