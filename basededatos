@@ -1,1 +1,260 @@
 
+-- phpMyAdmin SQL Dump
+-- version 4.8.4
+-- https://www.phpmyadmin.net/
+--
+-- Host: bwyiaik5x71d5qu1shlk-mysql.services.clever-cloud.com:3306
+-- Generation Time: May 29, 2022 at 03:56 PM
+-- Server version: 8.0.15-5
+-- PHP Version: 7.2.34
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `bwyiaik5x71d5qu1shlk`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `educacion`
+--
+
+CREATE TABLE `educacion` (
+  `id` bigint(20) NOT NULL,
+  `especialidad` varchar(255) DEFAULT NULL,
+  `fechafin` varchar(255) DEFAULT NULL,
+  `fechainicio` varchar(255) DEFAULT NULL,
+  `institucion` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `educacion`
+--
+
+INSERT INTO `educacion` (`id`, `especialidad`, `fechafin`, `fechainicio`, `institucion`) VALUES
+(1, 'ABOGADO EN DERECHO INFORMÁTICO', 'FEBRERO 2020', 'MARZO 2015', 'UNIVERSIDAD CATÓLICA DE CÓRDOBA'),
+(2, 'DIPLOMATURA EN ECONOMÍA CIRCULAR Y ESTRATEGIAS DE SUSTENTABILIDAD', 'DICIEMBRE 2021', 'SEPTIEMBRE 2021', 'UNC'),
+(3, 'TECNICATURA EN CIENCIA DE DATOS', '2024', 'MARZO 2022', 'ISPC CÓRDOBA'),
+(41, 'FUNDAMENTOS DE LA PROGRAMACIÓN', 'OCTUBRE 2021', 'AGOSTO 2021', 'ARGENTINA PROGRAMA - MUMUKI');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `exp_laboral`
+--
+
+CREATE TABLE `exp_laboral` (
+  `id` bigint(20) NOT NULL,
+  `empresa` varchar(255) DEFAULT NULL,
+  `fecha_fin` varchar(255) DEFAULT NULL,
+  `fecha_inicio` varchar(255) DEFAULT NULL,
+  `job_description` varchar(500) DEFAULT NULL,
+  `posicion` varchar(255) DEFAULT NULL,
+  `fechafin` varchar(255) DEFAULT NULL,
+  `fechainicio` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `exp_laboral`
+--
+
+INSERT INTO `exp_laboral` (`id`, `empresa`, `fecha_fin`, `fecha_inicio`, `job_description`, `posicion`, `fechafin`, `fechainicio`) VALUES
+(5, 'ESTUDIO JURÍDICO FIDELMINO', 'DICIEMBRE 2021', 'NOVIEMBRE 2020', 'Ayudante en tramitar causas judiciales en Tribunales Provinciales, en juzgados Civiles y Comerciales. Divorcios. Declaratoria de Herederos. Sucesiones. Trámites bancarios. Cartas Documento. Contratos. Regulación de Honorarios. Manejo de plataformas como Justicia Córdoba y Extranet.', 'PASANTE ESTUDIO JURÍDICO FIDELMINO', 'DICIEMBRE 2021', 'NOVIEMBRE 2020'),
+(6, 'UNIVERSIDAD CATÓLICA DE CÓRDOBA', 'ABRIL 2022', 'MARZO 2021', '*Instituto de Derecho Ambiental de la Universidad Católica de Córdoba. Proyecto de Investigación de Amparo Ambiental en la Provincia de Córdoba. *Proyecto de Investigación de Responsabilidad civil Contractual.', 'INVESTIGADOR ADSCRIPTO ', 'ABRIL 2022', 'MARZO 2021'),
+(42, 'ARGENTINA PROGRAMA', NULL, NULL, 'PROYECTO INTEGRADOR DE CERTIFICACIÓN', 'FULL STACK DEVELOPER JR', 'MAYO 2022', 'NOVIEMBRE 2021');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hibernate_sequence`
+--
+
+CREATE TABLE `hibernate_sequence` (
+  `next_val` bigint(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `hibernate_sequence`
+--
+
+INSERT INTO `hibernate_sequence` (`next_val`) VALUES
+(43);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `idioma`
+--
+
+CREATE TABLE `idioma` (
+  `id` bigint(20) NOT NULL,
+  `idioma` varchar(255) DEFAULT NULL,
+  `nivel` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `idioma`
+--
+
+INSERT INTO `idioma` (`id`, `idioma`, `nivel`) VALUES
+(7, 'INGLES', 'INTERMEDIO - B2'),
+(8, 'TYPESCRIPT', 'INTERMEDIO'),
+(9, 'HTML 5 Y CSS3', 'AVANZADO'),
+(10, 'PYTHON', 'INTERMEDIO'),
+(11, 'JAVASCRIPT', 'INTERMEDIO'),
+(39, 'JAVA', 'BÁSICO');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `id` bigint(20) NOT NULL,
+  `nombre` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`id`, `nombre`, `password`) VALUES
+(1, 'admin', 'admin1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `persona`
+--
+
+CREATE TABLE `persona` (
+  `id` bigint(20) NOT NULL,
+  `github_url` varchar(255) DEFAULT NULL,
+  `image_url` varchar(255) DEFAULT NULL,
+  `job_title` varchar(255) DEFAULT NULL,
+  `linkedin_url` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `sobre_Mi` varchar(2000) DEFAULT NULL,
+  `facebook_url` varchar(255) DEFAULT NULL,
+  `instagram_url` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `persona`
+--
+
+INSERT INTO `persona` (`id`, `github_url`, `image_url`, `job_title`, `linkedin_url`, `name`, `sobre_Mi`, `facebook_url`, `instagram_url`) VALUES
+(1, 'https://github.com/KevinMarcos26', 'https://media-exp1.licdn.com/dms/image/C4E03AQFaUd5UOB_dHA/profile-displayphoto-shrink_200_200/0/1536890903682?e=1654128000&v=beta&t=HMVoGq5Lh2tKYzhSbxsXB13B3F-Hbw1Uo6ysDm6FKJI', 'FULL STACK DEVELOPER JR', 'https://www.linkedin.com/in/kevin-marcos-agui-manera-392aa9170/', 'KEVIN MARCOS AGÜI MANERA', 'Hola, es un placer presentarme. Me llamo Kevin Marcos Agüi Manera. Tengo 25 años. Soy oriundo de la Ciudad de Córdoba Capital. En Marzo del año 2020, me gradué con honores en la Facultad de Derecho y Ciencias Sociales de la Universidad Católica de Córdoba, con el título de grado de Abogado.\nActualmente resido en Córdoba Capital y poseo manejo de inglés legal escrito. Desde agosto de 2021 inicié mi formación como Full Stack Developer, dentro del programa gubernamental Argentina Programa, y es de mi interés desarrollarme en el mundo profesional IT, sobre todo continuar mi formación en el rubro de los datos y el Gobierno de Datos e Inteligencia Artificial. Con la habilidad de completar tareas de forma precisa, en un entorno rápido y con plazos de entrega conflictivos. Responsable. Puntual. Dedicado. Proactivo. Capaz de trabajar en equipo.', 'https://www.facebook.com/kevinmarcos.aguimanera', 'https://www.instagram.com/kevin_manera96/');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `proyecto`
+--
+
+CREATE TABLE `proyecto` (
+  `id` bigint(20) NOT NULL,
+  `descripcion` varchar(255) DEFAULT NULL,
+  `p_image` varchar(255) DEFAULT NULL,
+  `p_name` varchar(255) DEFAULT NULL,
+  `p_url` varchar(255) DEFAULT NULL,
+  `tecnologias` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `proyecto`
+--
+
+INSERT INTO `proyecto` (`id`, `descripcion`, `p_image`, `p_name`, `p_url`, `tecnologias`) VALUES
+(19, 'Base de Datos para un Cine, desarrollada en MySql, para la obtención de Certificación en base de datos SQL en Udemy; con más de 300 líneas de código.', 'https://media-exp1.licdn.com/dms/image/C4D2DAQE7VgK_2JSQ6g/profile-treasury-image-shrink_800_800/0/1652727163115?e=1653332400&v=beta&t=K0NCbgsUlkcFlfKdUzfTAs1bJ-IEwO_dl9hsu9MERkA', 'Base de Datos de un Cine en MySql', 'https://github.com/KevinMarcos26/cine-database-MySQL-', 'MySql - Sql'),
+(22, 'Proyecto para obtener certificación en Start Coding, basado en un backend desarrollado en Node js y express como servidor, para desplegar una biblioteca de artistas y sus correspondientes discos', 'https://media-exp1.licdn.com/dms/image/C4D2DAQEHcocEKhJVDQ/profile-treasury-image-shrink_800_800/0/1652727134664?e=1653332400&v=beta&t=UtJCFfwutXRLgswhnXK3hojt8Vkj1eYRa5rerG_7XmU', 'Backend Biblioteca de Artistas y Discos en Node.js', 'https://github.com/KevinMarcos26/ChallengeNodejs', 'Node.js y Express server'),
+(23, 'Aplicativo realizado en React y Aptugo, que interactúa con una base de datos, con la finalidad de llevar un registro de suscriptores a diferentes servicios profesionales ofrecidos por el titular de la landing page.', 'https://media-exp1.licdn.com/dms/image/C4D2DAQFMpDRx_DMeAg/profile-treasury-image-shrink_800_800/0/1652727911503?e=1653336000&v=beta&t=Hyn1fLPsVBPem_T5esqSTf_sYnIhCP_MQZLVAVqDs28', 'Aplicación de Suscripción en React', 'https://github.com/KevinMarcos26/Suscripcion1', 'React y Redux'),
+(34, 'Análisis histórico de ventas de videojuegos, realizado con la herramienta Microsoft Power Bi. Proyecto de dashboards, y análisis por países y diferentes indicadores.', 'https://media-exp1.licdn.com/dms/image/C4D2DAQGdjIYTsf8TRg/profile-treasury-image-shrink_800_800/0/1650259610309?e=1653332400&v=beta&t=tDz9FwzKKSRmcK3Te-h20qToA5w0PQgiM7BBqbPBTn4', 'Análisis de Ventas de Videojuegos en Power Bi', 'https://app.powerbi.com/view?r=eyJrIjoiMzU5OWJmMTAtZDEyZC00NzEwLTlhZjItMWI3NGI5NjNkNmU4IiwidCI6ImRkMjljYmVmLWY4MjMtNDhjMi04ODliLThiZTNkZmM0MzFlZCJ9&pageName=ReportSection', 'Microsoft Power Bi');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `skill`
+--
+
+CREATE TABLE `skill` (
+  `id` bigint(20) NOT NULL,
+  `tecnologia` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `skill`
+--
+
+INSERT INTO `skill` (`id`, `tecnologia`) VALUES
+(12, 'MICROSOFT POWER BI'),
+(13, 'ANGULAR JS'),
+(14, 'MICROSOFT EXCEL'),
+(15, 'SPRINGBOOT'),
+(16, 'BOOTSTRAP'),
+(17, 'VISUAL STUDIO CODE'),
+(38, 'REACT JS'),
+(40, 'APTUGO');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `educacion`
+--
+ALTER TABLE `educacion`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `exp_laboral`
+--
+ALTER TABLE `exp_laboral`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `idioma`
+--
+ALTER TABLE `idioma`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `persona`
+--
+ALTER TABLE `persona`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `proyecto`
+--
+ALTER TABLE `proyecto`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `skill`
+--
+ALTER TABLE `skill`
+  ADD PRIMARY KEY (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
